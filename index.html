@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-免费个人博客搭建教程（详细-图文）--Hexo+OSChina" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/02/免费个人博客搭建教程（详细-图文）--Hexo+OSChina/" class="article-date">
+  <time datetime="2017-04-01T23:49:03.262Z" itemprop="datePublished">2017-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="免费个人博客搭建教程（详细-图文）–Hexo-OSChina"><a href="#免费个人博客搭建教程（详细-图文）–Hexo-OSChina" class="headerlink" title="免费个人博客搭建教程（详细-图文）–Hexo+OSChina"></a>免费个人博客搭建教程（详细-图文）–Hexo+OSChina</h2><p>title: #免费个人博客搭建教程（详细-图文）–Hexo+OSChina<br>date: #20170402<br>tags: #转载</p>
+<h2 id="categories-转载"><a href="#categories-转载" class="headerlink" title="categories: #转载"></a>categories: #转载</h2><p>使用工具介绍</p>
+<pre><code>1. 码云 Pages：码云 Pages 是一个免费的静态网页托管服务，您可以使用码云 Pages 托管博客、项目官网等静态网页。这样就不用购买服务器和域名了，如果您使用过 Github Pages 那么您会很快上手使用码云的Pages服务。这里使用码云上的Pages 而不是用Github Pages，主要原因就是在国内没有VPN的话。。。你懂得！还有就是支持国产！链接：https://git.oschina.net/
+2. Hexo：Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。使用者只需要专注于写博客而不需要关注网站是如何生成的。而且还有丰富的博客主题可以选择！链接：https://hexo.io/zh-cn/（ps：这是国外网站，翻墙吧少年，需要自由门 翻墙软件可以在博客中联系我哦）
+</code></pre><p>搭建环境<br>Node.js安装。<br>参考：<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-install-setup.html（ps：如果没有VPN的用户最好切换一下npm的源，不然后续的步骤可能会让你想砸电脑，安装完后，在命令窗口执行下面代码）</a><br>npm config set registry <a href="http://registry.cnpmjs.org" target="_blank" rel="external">http://registry.cnpmjs.org</a>     #切换npm为淘宝镜像<br>Git安装。<br>参考<a href="http://www.runoob.com/git/git-install-setup.html" target="_blank" rel="external">http://www.runoob.com/git/git-install-setup.html</a><br>Hexo安装。（ ps：安装完Node.js和Git之后不需要配置些什么，只需要安装成功就是了，如果想明白原理的话可以深入的学习。）<br>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。打开命令窗口输入下面代码：<br>npm install -g hexo-cli<br>安装成功后输入hexo 如果得到下面这个结果，恭喜你！安装成功！</p>
+<p>Hexo的常用命令说明：<br>参考：<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/commands.html</a><br>本地运行Hexo<br>安装 Hexo 完成后，请依次执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。将<folder> 替换成项目存放的文件夹目录，<br>hexo init <folder><br>cd <folder><br>npm install<br>hexo generate<br>新建完成后，指定文件夹的目录如下：<br>.<br>├── .deploy       #需要部署的文件<br>├── node_modules  #Hexo插件<br>├── public        #生成的静态网页文件<br>├── scaffolds     #模板<br>├── source        #博客正文和其他源文件, 404 favicon CNAME 等都应该放在这里<br>|   ├── _drafts   #草稿<br>|   └── _posts    #文章<br>├── themes        #主题<br>├── _config.yml   #全局配置文件<br>└── package.json<br>进行到这步后就可以先在本地运行下，看看效果了。执行下面命令：<br>cd <folder>         #切换到项目目录下<br>npm install           #install before start blogging<br>hexo server         #运行本地服务<br>浏览器输入<a href="http://localhost:4000就可以看到效果。如下：" target="_blank" rel="external">http://localhost:4000就可以看到效果。如下：</a></folder></folder></folder></folder></p>
+<p>修改Hexo的主题<br>当然，上面运行的只是Hexo官方默认的主题配置效果，想要个性一点？，下面我们就将他改造成自己想要的个性主题。<br>Hexo的主题都是一些前端民间高手写的模版，可以在官方收录的主题中去挑选：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a><br>看上一个主题后点击下图位置，进入下载主题文件。如下图：</p>
+<p>主题下载完成后，将主题文件解压到Hexo项目的thems文件夹下面（ps:我这里的项目目录是在桌面的Hexo文件夹里面。）</p>
+<p>接下来就是修改Hexo的配置文件_config.yml，将里面theme 对应的值改为之前下载的主题的文件夹名字，本文里面下载的主题文件夹名字为hexo-theme-smackdown-master。<br>修改前</p>
+<p>修改后</p>
+<p>注意：这里“：”后面必须要有一个空格，而且这个空格要在英文输入法下，不然会报一些稀奇古怪的错。<br>按照之前步骤本地重新运行后，如下图：</p>
+<p>关于Hexo中_config.yml 文件的其他配置，大家可以参考官方的文档，这里就不多赘述了：<br>文档链接 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>下载的每个主题中，有一个配置文件，名字也叫_config.yml，这里大家千万不要和之前Hexo根目录下的_config.yml搞混淆了，这里面配置的主要是些与主题相关的东西，比如一些文章阅读量，多说插件，cnzz站长工具等等的配置信息。一般里面也都有注释，这里就不赘述了，不懂得可以在我的博客问我。<br>一些主题在GitHub上面也都有主题安装的一些文档，写的都很详细。推荐一个主题的文档，结合官方的文档看完之后，基本上也就明白了。<br>推荐一个主题的文档<a href="https://github.com/yscoder/hexo-theme-indigo/wiki" target="_blank" rel="external">https://github.com/yscoder/hexo-theme-indigo/wiki</a><br>编写博客文章<br>如果你使用过MarkDown 来写博客文章的话，接下来就简单多了，没使用过也没关系，推荐大家一个编辑工具马克飞象 链接：<a href="https://maxiang.io/，在编辑器里面写好文章后，复制或另存为.md文件" target="_blank" rel="external">https://maxiang.io/，在编辑器里面写好文章后，复制或另存为.md文件</a>, 与普通的.md文件不同 要在文件开头添加下面代码<br>title: #文章标题<br>date: #文章日期<br>tags: #文章标签</p>
+<h2 id="categories-文章分类"><a href="#categories-文章分类" class="headerlink" title="categories: #文章分类"></a>categories: #文章分类</h2><p>在.md文件的开头添加上面代码，是为了让Hexo框架在生成网页的时候，设置相应的参数。例如下图所示：</p>
+<p>将写好的.md文件放入Hexo项目的source 目录下的_posts 文件夹中，可以看到里面有个hello-world.md 文件，这就是默认的文章。<br>重新在本地启动项目，访问就可以看到之前添加的文章。<br>生成静态Html文件<br>现在只能在本地启动项目然后通过本地地址访问博客网站，下面我们就可以利用Hexo生成静态Html，很简单，只需要在命令窗口执行下面代码：<br>cd <folder>         #切换到项目目录下<br>hexo generate       #生成静态文件到项目根目录的public文件夹中<br>发布静态Html文件到码云 Pages上<br>注册一个码云帐号，并创建一个项目。如下图：</folder></p>
+<p>创建完项目后得到项目的Https的地址后面要用。地址获取如下图</p>
+<p>这里借用一个插件来帮助我们完成代码上传的工作，安装 hexo-deployer-git。安装代码如下：<br>npm install hexo-deployer-git –save        #把public里面生成的文件推上到码云上。<br>配置项目根目录_config.yml 文件，修改deploy 的值，如下图：<br>修改前</p>
+<p>修改后，注意repo 的地址是之前在码云上面创建醒目后获取的地址。</p>
+<p>修改完后在命令窗口执行下面命令：<br>cd <folder>         #切换到项目目录下<br>hexo deploy         #一键部署功能<br>之后会弹出一个对话框，输入码云的帐号密码。<br>部署成功之后，登录码云，查看之前创建的项目中出现了本地项目中public 文件夹中的文件，这时候代表之前的部署是成功的。<br>然后如下图，启动码云的pages功能：</folder></p>
+<p>访问链接：</p>
+<p>这时候就看到之前和本地启动一样的效果了。博客部署完成，在这之后，只需要每次用马克飞象写好文章后，放入Hexo项目的source 目录下的_posts 文件夹中，在按照之前步骤更新博客就OK了。还可以随时切换博客的主题哦！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/02/免费个人博客搭建教程（详细-图文）--Hexo+OSChina/" data-id="cj11djf5j0000kkiplv2rt0yn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/02/免费个人博客搭建教程（详细-图文）--Hexo+OSChina/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
