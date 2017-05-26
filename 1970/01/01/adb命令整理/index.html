@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>adb常用命令整理 | Hexo</title>
+  <title>adb常用命令整理 | 邢伦远</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
 清除应用数据：1adb shell pm clear packagenam">
 <meta property="og:type" content="article">
 <meta property="og:title" content="adb常用命令整理">
 <meta property="og:url" content="http://yoursite.com/1970/01/01/adb命令整理/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="邢伦远">
 <meta property="og:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
 清除应用数据：1adb shell pm clear packagenam">
-<meta property="og:updated_time" content="2017-05-26T06:02:52.485Z">
+<meta property="og:updated_time" content="2017-05-26T06:44:18.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="adb常用命令整理">
 <meta name="twitter:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
 清除应用数据：1adb shell pm clear packagenam">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="邢伦远" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -40,7 +40,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">邢伦远</a>
       </h1>
       
     </div>
@@ -130,23 +130,32 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell cat /proc/cpuinfo</div></pre></td></tr></table></figure>
 </li>
 <li><p>10.列表显示当前文件夹内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb root</div><div class="line">shell@device:/ # ls &lt;查看文件夹下的内容&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">adb shell  -&gt; ls     &lt;查看文件夹下的内容&gt;</div><div class="line">adb shell  -&gt; ls -l  &lt;查看文件夹下的内容、大小及权限&gt;</div><div class="line">adb shelll -&gt; ll     &lt;同上，很多机器不支持,推荐&quot;ls -l&quot;&gt;</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb root</div><div class="line">shell@device:/ # ll &lt;同上，还能看到文件大小和权限&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>11.打开文件夹：<br>adb shell -&gt;cd   <code>进入个人的主目录，即：/data</code><br>adb shell -&gt;cd .. <code>返回上一级目录</code><br>adb shell -&gt;cd ../.. <code>退出上两级目录</code><br>adb shell -&gt;cd - <code>返回上次所在的目录</code></li>
-<li>12.删除文件或文件夹：<br>adb shell -&gt;rm xxx <code>删除文件xxx</code><br>adb shell -&gt;rmdir xxx <code>删除xxx的文件夹</code><br>adb shell -&gt;rm -r xxx <code>删除名字为xxx的文件夹及其里面的所有文件</code></li>
-<li>13.创建：<br>adb shell -&gt;mkdir  xxx <code>创建xxx的文件夹</code><br>adb shell -&gt;mkdir -p xxx <code>递归创建xxx的文件夹</code></li>
-<li>14.复制：<br>adb shell -&gt;cp [<code>选项</code>]  [<code>来源文件</code>]  [<code>目的文件</code>]<br>选项：<br>-d 复制一个快捷方式;<br>-r 复制一个目录;<br>-i 对一个存在的文件，询问是否覆盖</li>
-<li>15.移动：<br>adb shell -&gt;mv [<code>选项</code>]  [<code>来源文件</code>]  [<code>目的文件</code>]<br>选项：<br>-u 目标文件存在时才会生效，如果源文件比目标文件新才会移动;<br>-i 对一个存在的文件，询问是否覆盖;</li>
-<li>16.查看文件内容：<br>adb shell -&gt;cat <code>查看一个文件的内容并显示在屏幕上</code><br>adb shell -&gt;more<br><code>也是用来查看一个文件的内容。当文件内容太多，一屏幕不能占下，使用more当看完一屏后按空格键继续看下一屏。看完所有内容后就会退出。如果你想提前退出，只需按q键即可。</code><br>adb shell -&gt;less<br><code>作用跟more一样，但比more好在可以上翻，下翻。空格键同样可以翻页，而按”j”键可以向下移动（按一下就向下移动一行），按”k”键向上移动。在使用more和less查看某个文件时，你可以按一下”/” 键，然后输入一个word回车，这样就可以查找这个word了。如果是多个该word可以按”n”键显示下一个。另外你也可以不按”/”而是按”?”后边同样跟word来搜索这个word，唯一不同的是，”/”是在当前行向下搜索，而”?”是在当前行向上搜索。</code></li>
+<li><p>11.打开文件夹：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cd   &lt;进入个人的主目录，即：/data&gt;</div><div class="line">adb shell -&gt;cd .. &lt;返回上一级目录&gt;</div><div class="line">adb shell -&gt;cd ../.. &lt;退出上两级目录&gt;</div><div class="line">adb shell -&gt;cd - &lt;返回上次所在的目录&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>12.删除文件或文件夹：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;rm xxx     &lt;删除文件xxx&gt;</div><div class="line">adb shell -&gt;rmdir xxx  &lt;删除xxx的文件夹&gt;</div><div class="line">adb shell -&gt;rm -r xxx  &lt;删除名字为xxx的文件夹及其里面的所有文件&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>13.创建：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;mkdir  xxx   &lt;创建xxx的文件夹&gt;</div><div class="line">adb shell -&gt;mkdir -p xxx &lt;递归创建xxx的文件夹&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>14.复制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cp [`选项`]  [`来源文件`]  [`目的文件`]</div><div class="line">选项：</div><div class="line">-d 复制一个快捷方式;</div><div class="line">-r 复制一个目录;</div><div class="line">-i 对一个存在的文件，询问是否覆盖</div></pre></td></tr></table></figure>
+</li>
+<li><p>15.移动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;mv [`选项`]  [`来源文件`]  [`目的文件`]</div><div class="line">选项：</div><div class="line">-u 目标文件存在时才会生效，如果源文件比目标文件新才会移动;</div><div class="line">-i 对一个存在的文件，询问是否覆盖;</div></pre></td></tr></table></figure>
+</li>
+<li><p>16.查看文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cat `查看一个文件的内容并显示在屏幕上`</div><div class="line">adb shell -&gt;more</div><div class="line">`也是用来查看一个文件的内容。当文件内容太多，一屏幕不能占下，使用more当看完一屏后按空格键继续看下一屏。看完所有内容后就会退出。如果你想提前退出，只需按q键即可。`</div><div class="line">adb shell -&gt;less</div><div class="line">`作用跟more一样，但比more好在可以上翻，下翻。空格键同样可以翻页，而按”j”键可以向下移动（按一下就向下移动一行），按”k”键向上移动。在使用more和less查看某个文件时，你可以按一下”/” 键，然后输入一个word回车，这样就可以查找这个word了。如果是多个该word可以按”n”键显示下一个。另外你也可以不按”/”而是按”?”后边同样跟word来搜索这个word，唯一不同的是，”/”是在当前行向下搜索，而”?”是在当前行向上搜索。`</div></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/1970/01/01/adb命令整理/" data-id="cj35g9gvo0001ugip5mt8h80q" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/1970/01/01/adb命令整理/" data-id="cj35hkqok0000zkip8ixht2hq" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
@@ -155,20 +164,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2017/04/02/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
@@ -209,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a></li></ul>
     </div>
   </div>
 
@@ -220,14 +215,6 @@
     <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/04/02/免费个人博客搭建教程（详细-图文）--Hexo+OSChina/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/02/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/1970/01/01/adb命令整理/">adb常用命令整理</a>
@@ -245,7 +232,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2017 xinglunyuan<br>
       Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
