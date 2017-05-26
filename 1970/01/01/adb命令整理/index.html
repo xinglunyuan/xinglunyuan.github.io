@@ -3,24 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>adb命令整理 | Hexo</title>
+  <title>adb常用命令整理 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：1adb install [选项] [apk路径]
-例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagen">
+  <meta name="description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagenam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="adb命令整理">
+<meta property="og:title" content="adb常用命令整理">
 <meta property="og:url" content="http://yoursite.com/1970/01/01/adb命令整理/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：1adb install [选项] [apk路径]
-例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagen">
-<meta property="og:updated_time" content="2017-04-03T09:37:26.370Z">
+<meta property="og:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagenam">
+<meta property="og:updated_time" content="2017-05-26T06:02:52.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="adb命令整理">
-<meta name="twitter:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：1adb install [选项] [apk路径]
-例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagen">
+<meta name="twitter:title" content="adb常用命令整理">
+<meta name="twitter:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagenam">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      adb命令整理
+      adb常用命令整理
     </h1>
   
 
@@ -95,8 +92,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>@(android)[adb|adb命令|adb命令整理]</code><br>卸载：<br>adb uninstall packagename<br>安装：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb install [选项] [apk路径]</div></pre></td></tr></table></figure></p>
-<p>例：E:\1.apk<br>adb启动应用Activity：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am start -n package/package.LoginActivity</div></pre></td></tr></table></figure></p>
+        <p><code>@(android)[adb|adb命令|adb命令整理]</code><br>卸载：<br>adb uninstall packagename<br>安装：<br>adb install [选项] [apk路径]<br>例：E:\1.apk<br>adb启动应用Activity：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am start -n package/package.LoginActivity</div></pre></td></tr></table></figure></p>
 <p>清除应用数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell pm clear packagename</div></pre></td></tr></table></figure></p>
 <p>设备读取文件：<br>pull：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [remote] [local]</div><div class="line">例：adb pull /sdcard/1.txt F:\</div></pre></td></tr></table></figure></p>
 <p>push：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [local] [remote]</div><div class="line">例：adb push F:\1.txt /sdcard/</div></pre></td></tr></table></figure></p>
@@ -116,18 +112,28 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell pm list packages -f</div></pre></td></tr></table></figure>
 </li>
 <li><p>4.am的状态 Activity Manager State：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys activity</div><div class="line">- 5.包信息 Package Information：</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys activity</div></pre></td></tr></table></figure>
+</li>
+<li><p>5.包信息 Package Information：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys package</div></pre></td></tr></table></figure>
+</li>
+<li><p>6.内存使用情况Memory Usage：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys meminfo</div></pre></td></tr></table></figure>
+</li>
+<li><p>7.Memory Use Over Time：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys procstats</div></pre></td></tr></table></figure>
+</li>
+<li><p>8.Graphics State：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys gfxinfo</div></pre></td></tr></table></figure>
+</li>
+<li><p>9.查看手机CPU,可以看到手机架构(eg.ARMv7) 和几核处理器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell cat /proc/cpuinfo</div></pre></td></tr></table></figure>
+</li>
+<li><p>10.列表显示当前文件夹内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb root</div><div class="line">shell@device:/ # ls &lt;查看文件夹下的内容&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>adb shell dumpsys package</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 6.内存使用情况Memory Usage：</div></pre></td></tr></table></figure>
-<p>adb shell dumpsys meminfo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 7.Memory Use Over Time：</div></pre></td></tr></table></figure></p>
-<p>adb shell dumpsys procstats<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 8.Graphics State：</div></pre></td></tr></table></figure></p>
-<p>adb shell dumpsys gfxinfo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 9.查看手机CPU,可以看到手机架构(eg.ARMv7) 和几核处理器：</div></pre></td></tr></table></figure></p>
-<p>adb shell cat /proc/cpuinfo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 10.列表显示当前文件夹内容：</div></pre></td></tr></table></figure></p>
-<p>adb root<br>shell@device:/ # ls &lt;查看文件夹下的内容&gt;</p>
-<pre><code>
-</code></pre><p>adb root<br>shell@device:/ # ll &lt;同上，还能看到文件大小和权限&gt;<br>``` </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb root</div><div class="line">shell@device:/ # ll &lt;同上，还能看到文件大小和权限&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li>11.打开文件夹：<br>adb shell -&gt;cd   <code>进入个人的主目录，即：/data</code><br>adb shell -&gt;cd .. <code>返回上一级目录</code><br>adb shell -&gt;cd ../.. <code>退出上两级目录</code><br>adb shell -&gt;cd - <code>返回上次所在的目录</code></li>
 <li>12.删除文件或文件夹：<br>adb shell -&gt;rm xxx <code>删除文件xxx</code><br>adb shell -&gt;rmdir xxx <code>删除xxx的文件夹</code><br>adb shell -&gt;rm -r xxx <code>删除名字为xxx的文件夹及其里面的所有文件</code></li>
@@ -140,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/1970/01/01/adb命令整理/" data-id="cj11wsvq200008gipkkdq4q89" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/1970/01/01/adb命令整理/" data-id="cj35g9gvo0001ugip5mt8h80q" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
@@ -224,7 +230,7 @@
           </li>
         
           <li>
-            <a href="/1970/01/01/adb命令整理/">adb命令整理</a>
+            <a href="/1970/01/01/adb命令整理/">adb常用命令整理</a>
           </li>
         
       </ul>
