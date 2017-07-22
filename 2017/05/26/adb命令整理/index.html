@@ -5,19 +5,22 @@
   
   <title>adb常用命令整理 | 邢伦远</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagenam">
+  <meta name="description" content="卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagename
+设备读取文件：pull：12adb push [rem">
 <meta property="og:type" content="article">
 <meta property="og:title" content="adb常用命令整理">
-<meta property="og:url" content="http://yoursite.com/1970/01/01/adb命令整理/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/05/26/adb命令整理/index.html">
 <meta property="og:site_name" content="邢伦远">
-<meta property="og:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagenam">
-<meta property="og:updated_time" content="2017-05-26T06:44:18.028Z">
+<meta property="og:description" content="卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagename
+设备读取文件：pull：12adb push [rem">
+<meta property="og:updated_time" content="2017-07-22T16:00:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="adb常用命令整理">
-<meta name="twitter:description" content="@(android)[adb|adb命令|adb命令整理]卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
-清除应用数据：1adb shell pm clear packagenam">
+<meta name="twitter:description" content="卸载：adb uninstall packagename安装：adb install [选项] [apk路径]例：E:\1.apkadb启动应用Activity：1adb shell am start -n package/package.LoginActivity
+清除应用数据：1adb shell pm clear packagename
+设备读取文件：pull：12adb push [rem">
   
     <link rel="alternate" href="/atom.xml" title="邢伦远" type="application/atom+xml">
   
@@ -55,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -68,8 +71,8 @@
       <div class="outer">
         <section id="main"><article id="post-adb命令整理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/adb命令整理/" class="article-date">
-  <time datetime="1970-01-01T05:36:10.403Z" itemprop="datePublished">1970-01-01</time>
+    <a href="/2017/05/26/adb命令整理/" class="article-date">
+  <time datetime="2017-05-26T06:44:20.000Z" itemprop="datePublished">2017-05-26</time>
 </a>
     
   <div class="article-category">
@@ -92,7 +95,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>@(android)[adb|adb命令|adb命令整理]</code><br>卸载：<br>adb uninstall packagename<br>安装：<br>adb install [选项] [apk路径]<br>例：E:\1.apk<br>adb启动应用Activity：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am start -n package/package.LoginActivity</div></pre></td></tr></table></figure></p>
+        <p>卸载：<br>adb uninstall packagename<br>安装：<br>adb install [选项] [apk路径]<br>例：E:\1.apk<br>adb启动应用Activity：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am start -n package/package.LoginActivity</div></pre></td></tr></table></figure></p>
 <p>清除应用数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell pm clear packagename</div></pre></td></tr></table></figure></p>
 <p>设备读取文件：<br>pull：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [remote] [local]</div><div class="line">例：adb pull /sdcard/1.txt F:\</div></pre></td></tr></table></figure></p>
 <p>push：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [local] [remote]</div><div class="line">例：adb push F:\1.txt /sdcard/</div></pre></td></tr></table></figure></p>
@@ -155,15 +158,29 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/1970/01/01/adb命令整理/" data-id="cj35hkqok0000zkip8ixht2hq" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/26/adb命令整理/" data-id="cj5fhdq1u0002tslcx9xqasqp" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb/">adb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb命令/">adb命令</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb命令整理/">adb命令整理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
 
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/07/22/linphone-android for mac编译过程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          linphone-android for mac编译过程记录
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -173,9 +190,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/开发工具/">开发工具</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linphone/">linphone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发工具/">开发工具</a></li></ul>
     </div>
   </div>
 
@@ -183,9 +200,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/aar/">aar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb命令/">adb命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb命令整理/">adb命令整理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/androidStudio/">androidStudio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android配置/">android配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linphone/">linphone</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu-配置/">ubuntu-配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境变量/">环境变量</a></li></ul>
     </div>
   </div>
 
@@ -193,9 +210,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/开发工具/" style="font-size: 10px;">开发工具</a>
+      <a href="/tags/aar/" style="font-size: 10px;">aar</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/adb命令/" style="font-size: 10px;">adb命令</a> <a href="/tags/adb命令整理/" style="font-size: 10px;">adb命令整理</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/androidStudio/" style="font-size: 10px;">androidStudio</a> <a href="/tags/android配置/" style="font-size: 10px;">android配置</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/linphone/" style="font-size: 10px;">linphone</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/ubuntu-配置/" style="font-size: 10px;">ubuntu-配置</a> <a href="/tags/开发工具/" style="font-size: 10px;">开发工具</a> <a href="/tags/环境变量/" style="font-size: 15px;">环境变量</a>
     </div>
   </div>
 
@@ -204,7 +221,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
     </div>
   </div>
 
@@ -212,12 +229,24 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/1970/01/01/adb命令整理/">adb常用命令整理</a>
+            <a href="/2017/07/22/ubuntu-android开发环境配置/">ubuntu-android开发环境配置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/22/AndroidStudio引用aar文件碰到的问题/">AndroidStudio引用aar文件碰到的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/22/linphone-android for mac编译过程/">linphone-android for mac编译过程记录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/26/adb命令整理/">adb常用命令整理</a>
           </li>
         
       </ul>
@@ -233,7 +262,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 xinglunyuan<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

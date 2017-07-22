@@ -3,14 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>邢伦远</title>
+  <title>linphone-android for mac编译过程记录 | 邢伦远</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="邢伦远">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本文记录linphone-andoroid在mac上的编译过程，在这里做下记录，希望对大家有所帮助，如有疑问发评论即可：
+环境搭建：
+代码下载：git clone git://git.linphone.org/linphone-android.git –recursive
+代码同步更新：git submodule sync &amp;amp;&amp;amp; git submodule update –init">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linphone-android for mac编译过程记录">
+<meta property="og:url" content="http://yoursite.com/2017/07/22/linphone-android for mac编译过程/index.html">
 <meta property="og:site_name" content="邢伦远">
+<meta property="og:description" content="本文记录linphone-andoroid在mac上的编译过程，在这里做下记录，希望对大家有所帮助，如有疑问发评论即可：
+环境搭建：
+代码下载：git clone git://git.linphone.org/linphone-android.git –recursive
+代码同步更新：git submodule sync &amp;amp;&amp;amp; git submodule update –init">
+<meta property="og:image" content="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-07-22T15:59:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邢伦远">
+<meta name="twitter:title" content="linphone-android for mac编译过程记录">
+<meta name="twitter:description" content="本文记录linphone-andoroid在mac上的编译过程，在这里做下记录，希望对大家有所帮助，如有疑问发评论即可：
+环境搭建：
+代码下载：git clone git://git.linphone.org/linphone-android.git –recursive
+代码同步更新：git submodule sync &amp;amp;&amp;amp; git submodule update –init">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternate" href="/atom.xml" title="邢伦远" type="application/atom+xml">
   
@@ -59,99 +74,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ubuntu-android开发环境配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/22/ubuntu-android开发环境配置/" class="article-date">
-  <time datetime="2017-07-22T14:42:41.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ubuntu/">ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/ubuntu-android开发环境配置/">ubuntu-android开发环境配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文记录个人的ubuntu-android开发环境配置，在这里做下记录，希望对大家有所帮助，如有疑问发评论即可：</p>
-<h4 id="配置文件：-etc-profile-或-profile"><a href="#配置文件：-etc-profile-或-profile" class="headerlink" title="配置文件：/etc/profile 或 ~/.profile"></a>配置文件：/etc/profile 或 ~/.profile</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># java</span></div><div class="line">export JAVA_HOME=/usr/lib/jvm/jdk1<span class="number">.7</span><span class="number">.0</span>_79</div><div class="line">export JRE_HOME=/usr/lib/jvm/jdk1<span class="number">.7</span><span class="number">.0</span>_79/jre</div><div class="line">export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH</div><div class="line">export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin</div><div class="line"></div><div class="line"><span class="comment"># Android SDK</span></div><div class="line">export ANDROID_HOME=/home/ceict/Application/android-sdk</div><div class="line">export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools</div><div class="line"></div><div class="line"><span class="comment"># Android NDK</span></div><div class="line">export ANDROID_NDK_HOME=/home/ceict/Application/android-ndk-r9d</div><div class="line">export PATH=$PATH:$ANDROID_NDK_HOME</div></pre></td></tr></table></figure>
-<p>欢迎关注微信公众号：<br><img src="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="300" height="300" alt="微信公众号" align="center"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/ubuntu-android开发环境配置/" data-id="cj5fhdq230007tslc909nzvvv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu-配置/">ubuntu-配置</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境变量/">环境变量</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AndroidStudio引用aar文件碰到的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/22/AndroidStudio引用aar文件碰到的问题/" class="article-date">
-  <time datetime="2017-07-22T14:42:21.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/android/">android</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/AndroidStudio引用aar文件碰到的问题/">AndroidStudio引用aar文件碰到的问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用build.gradle添加.aar文件的引用，如：compile (name:’sdk2’, ext:’aar’)，<br>需要在build.gradle的android配置增加以下配置不会报not found错误：</p>
-<p><img src="http://img.blog.csdn.net/20170718161410217?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="报错信息"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">       flatDir &#123;</div><div class="line">           dirs <span class="string">'src/main/jniLibs'</span></div><div class="line">       &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
-<p>欢迎关注微信公众号：<br><img src="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="300" height="300" alt="微信公众号" align="center"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/22/AndroidStudio引用aar文件碰到的问题/" data-id="cj5fhdq1q0000tslcr65zcuhk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aar/">aar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/androidStudio/">androidStudio</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-linphone-android for mac编译过程" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-linphone-android for mac编译过程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/07/22/linphone-android for mac编译过程/" class="article-date">
   <time datetime="2017-07-22T14:24:18.000Z" itemprop="datePublished">2017-07-22</time>
@@ -168,8 +91,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/linphone-android for mac编译过程/">linphone-android for mac编译过程记录</a>
+    <h1 class="article-title" itemprop="name">
+      linphone-android for mac编译过程记录
     </h1>
   
 
@@ -204,111 +127,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-adb命令整理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/26/adb命令整理/" class="article-date">
-  <time datetime="2017-05-26T06:44:20.000Z" itemprop="datePublished">2017-05-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2017/07/22/AndroidStudio引用aar文件碰到的问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          AndroidStudio引用aar文件碰到的问题
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/adb命令整理/">adb常用命令整理</a>
-    </h1>
   
+    <a href="/2017/05/26/adb命令整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">adb常用命令整理</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>卸载：<br>adb uninstall packagename<br>安装：<br>adb install [选项] [apk路径]<br>例：E:\1.apk<br>adb启动应用Activity：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am start -n package/package.LoginActivity</div></pre></td></tr></table></figure></p>
-<p>清除应用数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell pm clear packagename</div></pre></td></tr></table></figure></p>
-<p>设备读取文件：<br>pull：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [remote] [local]</div><div class="line">例：adb pull /sdcard/1.txt F:\</div></pre></td></tr></table></figure></p>
-<p>push：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb push [local] [remote]</div><div class="line">例：adb push F:\1.txt /sdcard/</div></pre></td></tr></table></figure></p>
-<p>抓取log信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb logcat -v time &gt;[保存路径]</div><div class="line">例：adb logcat -v time &gt;F:\123.txt</div></pre></td></tr></table></figure></p>
-<p>wifi调试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb tcpip 5555 #设置tcp端口</div><div class="line">adb connect  device-ip-address</div></pre></td></tr></table></figure></p>
-<p>获取管理员权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">adb root</div><div class="line">shell@device:/ # su</div><div class="line">root@device:/ #</div></pre></td></tr></table></figure></p>
-<p>重新挂载系统分区，使系统分区重新可写(读写data目录)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb remount</div><div class="line">remount succeeded</div></pre></td></tr></table></figure></p>
-<p>adb shell环境：</p>
-<ul>
-<li><p>1.获取设备IP地址：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell netcfg</div><div class="line">adb shell ifconfig eth0</div></pre></td></tr></table></figure>
-</li>
-<li><p>2.查看栈顶Acvitity，可以用来获取包名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys activity top</div></pre></td></tr></table></figure>
-</li>
-<li><p>3.查看所有已安装的应用的包名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell pm list packages -f</div></pre></td></tr></table></figure>
-</li>
-<li><p>4.am的状态 Activity Manager State：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys activity</div></pre></td></tr></table></figure>
-</li>
-<li><p>5.包信息 Package Information：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys package</div></pre></td></tr></table></figure>
-</li>
-<li><p>6.内存使用情况Memory Usage：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys meminfo</div></pre></td></tr></table></figure>
-</li>
-<li><p>7.Memory Use Over Time：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys procstats</div></pre></td></tr></table></figure>
-</li>
-<li><p>8.Graphics State：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell dumpsys gfxinfo</div></pre></td></tr></table></figure>
-</li>
-<li><p>9.查看手机CPU,可以看到手机架构(eg.ARMv7) 和几核处理器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell cat /proc/cpuinfo</div></pre></td></tr></table></figure>
-</li>
-<li><p>10.列表显示当前文件夹内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">adb shell  -&gt; ls     &lt;查看文件夹下的内容&gt;</div><div class="line">adb shell  -&gt; ls -l  &lt;查看文件夹下的内容、大小及权限&gt;</div><div class="line">adb shelll -&gt; ll     &lt;同上，很多机器不支持,推荐&quot;ls -l&quot;&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>11.打开文件夹：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cd   &lt;进入个人的主目录，即：/data&gt;</div><div class="line">adb shell -&gt;cd .. &lt;返回上一级目录&gt;</div><div class="line">adb shell -&gt;cd ../.. &lt;退出上两级目录&gt;</div><div class="line">adb shell -&gt;cd - &lt;返回上次所在的目录&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>12.删除文件或文件夹：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;rm xxx     &lt;删除文件xxx&gt;</div><div class="line">adb shell -&gt;rmdir xxx  &lt;删除xxx的文件夹&gt;</div><div class="line">adb shell -&gt;rm -r xxx  &lt;删除名字为xxx的文件夹及其里面的所有文件&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>13.创建：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;mkdir  xxx   &lt;创建xxx的文件夹&gt;</div><div class="line">adb shell -&gt;mkdir -p xxx &lt;递归创建xxx的文件夹&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>14.复制：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cp [`选项`]  [`来源文件`]  [`目的文件`]</div><div class="line">选项：</div><div class="line">-d 复制一个快捷方式;</div><div class="line">-r 复制一个目录;</div><div class="line">-i 对一个存在的文件，询问是否覆盖</div></pre></td></tr></table></figure>
-</li>
-<li><p>15.移动：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;mv [`选项`]  [`来源文件`]  [`目的文件`]</div><div class="line">选项：</div><div class="line">-u 目标文件存在时才会生效，如果源文件比目标文件新才会移动;</div><div class="line">-i 对一个存在的文件，询问是否覆盖;</div></pre></td></tr></table></figure>
-</li>
-<li><p>16.查看文件内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">adb shell -&gt;cat `查看一个文件的内容并显示在屏幕上`</div><div class="line">adb shell -&gt;more</div><div class="line">`也是用来查看一个文件的内容。当文件内容太多，一屏幕不能占下，使用more当看完一屏后按空格键继续看下一屏。看完所有内容后就会退出。如果你想提前退出，只需按q键即可。`</div><div class="line">adb shell -&gt;less</div><div class="line">`作用跟more一样，但比more好在可以上翻，下翻。空格键同样可以翻页，而按”j”键可以向下移动（按一下就向下移动一行），按”k”键向上移动。在使用more和less查看某个文件时，你可以按一下”/” 键，然后输入一个word回车，这样就可以查找这个word了。如果是多个该word可以按”n”键显示下一个。另外你也可以不按”/”而是按”?”后边同样跟word来搜索这个word，唯一不同的是，”/”是在当前行向下搜索，而”?”是在当前行向上搜索。`</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/26/adb命令整理/" data-id="cj5fhdq1u0002tslcx9xqasqp" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb/">adb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb命令/">adb命令</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb命令整理/">adb命令整理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         

@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: 开发工具 | 邢伦远</title>
+  <title>AndroidStudio引用aar文件碰到的问题 | 邢伦远</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="邢伦远">
-<meta property="og:url" content="http://yoursite.com/categories/开发工具/index.html">
+  <meta name="description" content="使用build.gradle添加.aar文件的引用，如：compile (name:’sdk2’, ext:’aar’)，需要在build.gradle的android配置增加以下配置不会报not found错误：
+12345repositories &amp;#123;       flatDir &amp;#123;           dirs &apos;src/main/jniLibs&apos;       &amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidStudio引用aar文件碰到的问题">
+<meta property="og:url" content="http://yoursite.com/2017/07/22/AndroidStudio引用aar文件碰到的问题/index.html">
 <meta property="og:site_name" content="邢伦远">
+<meta property="og:description" content="使用build.gradle添加.aar文件的引用，如：compile (name:’sdk2’, ext:’aar’)，需要在build.gradle的android配置增加以下配置不会报not found错误：
+12345repositories &amp;#123;       flatDir &amp;#123;           dirs &apos;src/main/jniLibs&apos;       &amp;#125;">
+<meta property="og:image" content="http://img.blog.csdn.net/20170718161410217?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-07-22T15:59:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邢伦远">
+<meta name="twitter:title" content="AndroidStudio引用aar文件碰到的问题">
+<meta name="twitter:description" content="使用build.gradle添加.aar文件的引用，如：compile (name:’sdk2’, ext:’aar’)，需要在build.gradle的android配置增加以下配置不会报not found错误：
+12345repositories &amp;#123;       flatDir &amp;#123;           dirs &apos;src/main/jniLibs&apos;       &amp;#125;">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170718161410217?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternate" href="/atom.xml" title="邢伦远" type="application/atom+xml">
   
@@ -59,39 +69,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/26/adb命令整理/" class="archive-article-date">
-  <time datetime="2017-05-26T06:44:20.000Z" itemprop="datePublished">May 26</time>
+        <section id="main"><article id="post-AndroidStudio引用aar文件碰到的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/22/AndroidStudio引用aar文件碰到的问题/" class="article-date">
+  <time datetime="2017-07-22T14:42:21.000Z" itemprop="datePublished">2017-07-22</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/android/">android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/26/adb命令整理/">adb常用命令整理</a>
+    <h1 class="article-title" itemprop="name">
+      AndroidStudio引用aar文件碰到的问题
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用build.gradle添加.aar文件的引用，如：compile (name:’sdk2’, ext:’aar’)，<br>需要在build.gradle的android配置增加以下配置不会报not found错误：</p>
+<p><img src="http://img.blog.csdn.net/20170718161410217?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="报错信息"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">repositories &#123;</div><div class="line">       flatDir &#123;</div><div class="line">           dirs <span class="string">'src/main/jniLibs'</span></div><div class="line">       &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>欢迎关注微信公众号：<br><img src="http://img.blog.csdn.net/20170722215833247?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbHVueXVhbjIx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="300" height="300" alt="微信公众号" align="center"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/22/AndroidStudio引用aar文件碰到的问题/" data-id="cj5fhdq1q0000tslcr65zcuhk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aar/">aar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/androidStudio/">androidStudio</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/22/ubuntu-android开发环境配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ubuntu-android开发环境配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/22/linphone-android for mac编译过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linphone-android for mac编译过程记录</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
